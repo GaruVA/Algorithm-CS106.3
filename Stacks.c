@@ -25,3 +25,12 @@ int pop() {
         return -1;
     }
 }
+
+int peek() {
+    if (!isempty()) {
+        return st.s[st.top];
+    } else {
+        printf("Stack is empty. Cannot peek.\n");
+        return -1;
+    }
+}
