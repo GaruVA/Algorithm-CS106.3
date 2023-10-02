@@ -34,3 +34,19 @@ int peek() {
         return -1;
     }
 }
+
+int isempty() {
+    if (st.top == -1) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int isfull() {
+    if (st.top == size - 1) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
