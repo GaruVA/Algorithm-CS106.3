@@ -14,3 +14,14 @@ void push(int item) {
         printf("Stack is full. Cannot push item.\n");
     }
 }
+
+int pop() {
+    if (!isempty()) {
+        int item = st.s[st.top];
+        st.top--;
+        return item;
+    } else {
+        printf("Stack is empty. Cannot pop item.\n");
+        return -1;
+    }
+}
