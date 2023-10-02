@@ -50,3 +50,18 @@ int isfull() {
         return 0;
     }
 }
+
+int main() {
+    /*
+    Push: Adds an element(n) to the top of the stack
+    push(n);
+
+    Pop: Removes and returns the top element of the stack
+    pop();
+
+    Peek: Allows you to view the top element without removing it
+    peek();
+    printf("%d", peek());
+    */
+    return 0;
+}
