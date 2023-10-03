@@ -2,7 +2,7 @@
 
 void insert(int array[], int size, int rightIndex, int value) {
     int i;
-    for(i = rightIndex; i!= -1 && array[i] > value; i--) {
+    for(i = rightIndex; i >= 0 && array[i] > value; i--) {
         array[i+1] = array[i];
     }
     array[i+1] = value;
