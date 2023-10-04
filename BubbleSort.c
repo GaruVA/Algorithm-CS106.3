@@ -23,4 +23,10 @@ void bubbleSort(int array[], int size) {
 int main() {
     int array[] = {18, 9, 66, 44, 6, 22, 14};
     int size = sizeof(array) / sizeof(array[0]);
+    printf("Original Array: ");
+    for(int i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
 }
