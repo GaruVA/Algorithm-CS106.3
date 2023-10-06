@@ -9,6 +9,11 @@ struct Stack {
     int top;
 };
 
+// Initialize a stack
+void initStack(struct Stack *stack) {
+    stack->top = -1;
+}
+
 
 void push(int item) {
     if (!isfull()) {
