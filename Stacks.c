@@ -3,10 +3,12 @@
 
 #define MAX_SIZE 10
 
-struct stack {
-    int s[size];
+// Define the stack as a struct
+struct Stack {
+    int data[MAX_SIZE];
     int top;
-} st;
+};
+
 
 void push(int item) {
     if (!isfull()) {
