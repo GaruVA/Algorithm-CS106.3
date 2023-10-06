@@ -35,42 +35,13 @@ int pop(struct Stack *stack) {
     }
 }
 
-int peek() {
-    if (!isempty()) {
-        return st.s[st.top];
-    } else {
-        printf("Stack is empty. Cannot peek.\n");
-        return -1;
-    }
-}
-
-int isempty() {
-    if (st.top == -1) {
-        return 1;
-    } else {
-        return 0;
-    }
-}
-
-int isfull() {
-    if (st.top == size - 1) {
-        return 1;
-    } else {
-        return 0;
-    }
-}
-
 int main() {
-    /*
-    Push: Adds an element(n) to the top of the stack
-    push(n);
+    struct Stack stack;
+    initStack(&stack); // Pass a pointer to the stack for initialization
 
-    Pop: Removes and returns the top element of the stack
-    pop();
+    push(&stack, 5); // Push an integer onto the stack
+    push(&stack, 7); // Push another integer onto the stack
+    pop(&stack);     // Pop an element from the stack
 
-    Peek: Allows you to view the top element without removing it
-    peek();
-    printf("%d", peek());
-    */
     return 0;
 }
