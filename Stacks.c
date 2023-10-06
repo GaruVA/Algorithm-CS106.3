@@ -15,12 +15,12 @@ void initStack(struct Stack *stack) {
 }
 
 
-void push(int item) {
-    if (!isfull()) {
-        st.top++;
-        st.s[st.top] = item;
+void push(struct Stack *stack, int element) {
+    if (stack->top < MAX_SIZE - 1) {
+        stack->data[++stack->top] = element;
+        printf("Pushed '%d' onto the stack.\n", element);
     } else {
-        printf("Stack is full. Cannot push item.\n");
+        printf("Stack overflow. Cannot push '%d'.\n", element);
     }
 }
 
