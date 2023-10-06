@@ -24,14 +24,14 @@ void push(struct Stack *stack, int element) {
     }
 }
 
-int pop() {
-    if (!isempty()) {
-        int item = st.s[st.top];
-        st.top--;
-        return item;
+int pop(struct Stack *stack) {
+    if (stack->top >= 0) {
+        int element = stack->data[stack->top--];
+        printf("Popped '%d' from the stack.\n", element);
+        return element;
     } else {
-        printf("Stack is empty. Cannot pop item.\n");
-        return -1;
+        printf("Stack is empty. Cannot pop.\n");
+        return -1; // Return a default value to indicate failure
     }
 }
 
