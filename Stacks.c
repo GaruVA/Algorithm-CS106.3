@@ -1,5 +1,7 @@
 #include <stdio.h>
-#define size 5
+#include <stdbool.h>
+
+#define MAX_SIZE 10
 
 struct stack {
     int s[size];
