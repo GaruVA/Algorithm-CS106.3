@@ -9,7 +9,7 @@ void insert(int array[], int rightIndex, int value) {
 }
 
 void insertionSort(int array[], int size) {
-    for(int i = 0; i < size; i++) {
+    for(int i = 1; i < size; i++) {
         insert(array, i - 1, array[i]);
     }
 }
