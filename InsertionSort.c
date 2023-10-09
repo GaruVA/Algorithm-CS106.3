@@ -9,9 +9,14 @@ void insert(int array[], int rightIndex, int value) {
 }
 
 void insertionSort(int array[], int size) {
+    for(int i = 0; i < size; i++) {
+        insert(array, i - 1, array[i]);
+    }
 }
 
 
 int main() {
-
+    int array[] = {3, 5, 7, 11, 13, 2, 9, 6};
+    int size = sizeof(array) / sizeof(array[0]);
+    insertionSort(array, size);
 }
