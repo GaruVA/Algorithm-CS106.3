@@ -14,8 +14,8 @@ var middleCharacters = function(str) {
     return str.slice(1, -1);
 };
 
-var isPalindrome = function(str, size) {
-    if (str.length <= 1) {
+bool isPalindrome(int *str,int size) {
+    if (size <= 1) {
         return true;
     }
 
