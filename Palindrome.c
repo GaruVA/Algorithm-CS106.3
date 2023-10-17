@@ -14,4 +14,8 @@ int isPalindrome(char *str, int front, int rear) {
 }
 
 int main() {
+    char word[] = "rotor";
+    int length = strlen(word);
+    printf("%d\n", isPalindrome(word, 0, length - 1));
+    return 0;
 }
