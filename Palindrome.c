@@ -1,32 +1,18 @@
-// Returns the first character of the string str
-var firstCharacter = function(str) {
-    return str.slice(0, 1);
-};
+#include <stdio.h>
 
-// Returns the last character of a string str
-var lastCharacter = function(str) {
-    return str.slice(-1);
-};
-
-// Returns the string that results from removing the first
-//  and last characters from str
-var middleCharacters = function(str) {
-    return str.slice(1, -1);
-};
-
-bool isPalindrome(int *str,int size) {
-    if (size <= 1) {
-        return true;
+int isPalindrome(char *str,int front, int rear) {
+    if (front == rear) {
+        return 1;
     }
 
-    if(firstCharacter(str) !== lastCharacter(str)) {
-        return false;
+    if(str[front] != str[rear]) {
+        return 0;
     }
 
-    return isPalindrome(middleCharacters(str));
+    return isPalindrome(str, front + 1, rear - 1);
 };
 
-var checkPalindrome = function(str) {
-    println("Is this word a palindrome? " + str);
-    println(isPalindrome(str));
-};
+int main() {
+    char word[] = "rator";
+    printf("%d\n",isPalindrome(word, 0, 4));
+}
