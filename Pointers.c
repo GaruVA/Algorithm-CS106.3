@@ -3,7 +3,7 @@
 
 int main() {
     /*
-    Introduction to pointers
+    //Introduction to pointers
 
     int a;
     int* p;
@@ -18,7 +18,7 @@ int main() {
     */
 
     /*
-    Working with pointers
+    //Working with pointers
 
     int a = 10;
     int* p;
@@ -32,7 +32,7 @@ int main() {
     */
 
     /*
-    Pointer types, pointer arithmetic, void pointers
+    //Pointer types, pointer arithmetic, void pointers
 
     int a = 1025;
     int* p;
