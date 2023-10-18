@@ -50,6 +50,9 @@ int main() {
     printf("Address = %d", p1);
     */
 
+    /*
+    //Pointers to pointers
+
     int x = 5;
     int* p = &x;
     *p = 6;
@@ -64,4 +67,5 @@ int main() {
     printf("x = %d\n", x);
     **q = *p + 2;
     printf("x = %d\n", x);
+    */
 }
