@@ -4,26 +4,33 @@ int isEven(int n) {
     return n % 2 == 0;
 }
 
-int isOdd(int n) {
-    return !isEven(n);
-}
-
-int power(int n, int x) {
-    if(n == 0) {
-        return 1;
+double power(double x, int n) {
+    if (n == 0) {
+        return 1.0;
     }
-    if(n < 0) {
-        return 1/power(x, -n);
+    if (n < 0) {
+        return 1.0 / (x * power(x, -(n + 1)));
     }
-    if(isOdd(n)) {
+    if (isEven(n)) {
+        double halfpower = power(x, n / 2);
+        return halfpower * halfpower;
+    } else {
         return x * power(x, n - 1);
     }
-    if(isEven(n)) {
-        int halfpower = power(x, n / 2);
-        return halfpower * halfpower;
+}
+
+void displayPower(double x, int n) {
+    if(n < 0){
+        printf("%.0lf^%d = %.6lf\n", x, n, power(x, n));
+    } else {
+        printf("%.0lf^%d = %.0lf\n", x, n, power(x, n));
     }
 }
 
-void displayPower(int n, int x) {
-    printf("%d^%d = %d\n", n, x, power(n, x));
+int main() {
+    displayPower(3, 0);
+    displayPower(3, -1);
+    displayPower(3, 2);
+    displayPower(3, 3);
+    return 0;
 }
