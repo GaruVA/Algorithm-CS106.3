@@ -101,3 +101,7 @@ int main() {
 }
 */
 
+/*
+//Pointers and Arrays
+*/
+
