@@ -103,5 +103,12 @@ int main() {
 
 /*
 //Pointers and Arrays
+
+int A[5];   //Array Declare
+Element at index i -
+    Address - &A[i] or (A + i)
+    Value - A[i] or *(A + i)
+
+
 */
 
