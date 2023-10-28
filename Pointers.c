@@ -120,4 +120,30 @@ int main() {
 }
 */
 
+/*
+//Arrays as function arguments
+void Double(int A[], int size) //"int* A" or "int A[]" ..its the same..
+{
 
+    int i, sum = 0;
+    printf("Double - Size of A = %d, size of A[0] = %d\n", sizeof(A), sizeof(A[0]));
+    // Therefore Size has to be passed as arguments
+    for(i = 0; i < size; i++)
+    {
+        A[i] = 2*A[i]; // A[i] is *(A + i)
+    }
+}
+
+int main()
+{
+    int A[] = {1, 2, 3, 4, 5};
+    int size = sizeof(A)/sizeof(A[0]);
+    printf("Main - Size of A = %d, size of A[0] = %d\n", sizeof(A), sizeof(A[0]));
+    int i;
+    Double(A, size);
+    for(i = 0; i < size; i++)
+    {
+        printf("%d ", A[i]);
+    }
+}
+*/
