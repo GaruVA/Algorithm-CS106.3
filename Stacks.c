@@ -1,47 +1,41 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdlib.h>
 
-#define MAX_SIZE 10
+#define MAX_SIZE 100
 
-// Define the stack as a struct
-struct Stack {
-    int data[MAX_SIZE];
+typedef struct {
+    int stack[MAX_SIZE];
     int top;
-};
+} Stack;
 
-// Initialize a stack
-void initStack(struct Stack *stack) {
-    stack->top = -1;
+void initialize(Stack *s) {
+    s->top = -1;
 }
 
-
-void push(struct Stack *stack, int element) {
-    if (stack->top < MAX_SIZE - 1) {
-        stack->data[++stack->top] = element;
-        printf("Pushed '%d' onto the stack.\n", element);
-    } else {
-        printf("Stack overflow. Cannot push '%d'.\n", element);
+void push(Stack *s, int item) {
+    if (s->top == MAX_SIZE - 1) {
+        printf("Stack is full. Cannot push.\n");
+        return;
     }
+    s->stack[++s->top] = item;
 }
 
-int pop(struct Stack *stack) {
-    if (stack->top >= 0) {
-        int element = stack->data[stack->top--];
-        printf("Popped '%d' from the stack.\n", element);
-        return element;
-    } else {
+int pop(Stack *s) {
+    if (s->top == -1) {
         printf("Stack is empty. Cannot pop.\n");
-        return -1; // Return a default value to indicate failure
+        return -1;
     }
+    return s->stack[s->top--];
 }
 
 int main() {
-    struct Stack stack;
-    initStack(&stack); // Pass a pointer to the stack for initialization
+    Stack myStack;
+    initialize(&myStack);
 
-    push(&stack, 5); // Push an integer onto the stack
-    push(&stack, 7); // Push another integer onto the stack
-    pop(&stack);     // Pop an element from the stack
+    push(&myStack, 1);
+    push(&myStack, 2);
+
+    printf("Popped: %d\n", pop(&myStack)); // Popped: 2
 
     return 0;
 }
