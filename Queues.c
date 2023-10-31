@@ -37,3 +37,15 @@ int dequeue(Queue *q) {
     return item;
 }
 
+int main() {
+    Queue myQueue;
+    initialize(&myQueue);
+
+    enqueue(&myQueue, 1);
+    enqueue(&myQueue, 2);
+
+    printf("Dequeued: %d\n", dequeue(&myQueue)); // Dequeued: 1
+
+    return 0;
+}
+
