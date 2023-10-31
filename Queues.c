@@ -8,3 +8,10 @@ typedef struct {
     int front;
     int rear;
 } Queue;
+
+void initialize(Queue *q) {
+    q->front = -1;
+    q->rear = -1;
+}
+
+
