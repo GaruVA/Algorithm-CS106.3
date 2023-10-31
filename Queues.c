@@ -23,3 +23,17 @@ void enqueue(Queue *q, int item) {
         q->front = 0;
     q->queue[++q->rear] = item;
 }
+
+int dequeue(Queue *q) {
+    if (q->front == -1) {
+        printf("Queue is empty. Cannot dequeue.\n");
+        return -1;
+    }
+    int item = q->queue[q->front];
+    if (q->front == q->rear)
+        q->front = q->rear = -1;
+    else
+        q->front++;
+    return item;
+}
+
