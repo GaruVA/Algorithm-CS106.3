@@ -14,4 +14,12 @@ void initialize(Queue *q) {
     q->rear = -1;
 }
 
-
+void enqueue(Queue *q, int item) {
+    if (q->rear == MAX_SIZE - 1) {
+        printf("Queue is full. Cannot enqueue.\n");
+        return;
+    }
+    if (q->front == -1)
+        q->front = 0;
+    q->queue[++q->rear] = item;
+}
