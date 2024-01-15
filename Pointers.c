@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /*
 //Introduction to pointers
@@ -145,5 +146,25 @@ int main()
     {
         printf("%d ", A[i]);
     }
+}
+*/
+
+/*
+//Character arrays and pointers
+void print(char* C)
+{
+    while(*C != '\0')
+    {
+        printf("%c",*C);
+        C++;
+    }
+    printf("\n");
+}
+int main()
+{
+    char C[5] = {'J','O','H','N','\0'};  //or char C[5] = "JOHN";  null character will be added implicitly
+    printf("Size in bytes = %d\n", sizeof(C));
+    printf("Length = %d\n", strlen(C));
+    print(C);
 }
 */
